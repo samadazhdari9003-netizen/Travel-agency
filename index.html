@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="fa">
+<html lang="fa" dir="rtl">
 
 <head>
 
@@ -8,19 +8,27 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>آژانس هواپیمایی</title>
+<title>آژانس هواپیمایی آسمان آبی</title>
 
 <style>
 
-body{
+*{
 
 margin:0;
 
-font-family:tahoma;
+padding:0;
 
-direction:rtl;
+box-sizing:border-box;
 
-background:#f4f4f4;
+font-family:Tahoma,sans-serif;
+
+}
+
+body{
+
+background:#f5f7fa;
+
+line-height:1.8;
 
 }
 
@@ -28,7 +36,9 @@ header{
 
 height:100vh;
 
-background:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200') center/cover;
+background:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600') center center/cover no-repeat;
+
+position:relative;
 
 display:flex;
 
@@ -38,103 +48,223 @@ align-items:center;
 
 text-align:center;
 
-color:white;
-
 }
 
 .overlay{
 
-background:rgba(0,0,0,0.5);
+position:absolute;
 
-padding:40px;
+top:0;
 
-border-radius:15px;
+left:0;
 
-}
+width:100%;
 
-h1{
+height:100%;
 
-font-size:50px;
-
-margin:0;
+background:rgba(0,0,0,.55);
 
 }
 
-p{
+.hero-content{
 
-font-size:20px;
+position:relative;
+
+z-index:2;
+
+color:#fff;
+
+padding:20px;
+
+}
+
+.logo{
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.hero-content h1{
+
+font-size:55px;
+
+margin-bottom:15px;
+
+}
+
+.hero-content p{
+
+font-size:22px;
 
 }
 
 .booking{
 
-background:white;
+background:#fff;
 
 width:90%;
 
-max-width:500px;
+max-width:1000px;
 
-margin:40px auto;
+margin:-80px auto 50px;
 
 padding:30px;
 
 border-radius:15px;
 
-box-shadow:0 0 15px rgba(0,0,0,0.2);
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+position:relative;
+
+z-index:5;
 
 }
 
-input{
+.booking h2{
 
-width:100%;
+text-align:center;
 
-padding:15px;
+margin-bottom:25px;
 
-margin:10px 0;
+color:#003366;
+
+}
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:15px;
+
+}
+
+input,select{
+
+padding:12px;
 
 border:1px solid #ccc;
 
 border-radius:8px;
 
+font-size:15px;
+
+width:100%;
+
 }
 
 button{
 
-width:100%;
-
-padding:15px;
-
 background:#0077ff;
-
-border:none;
 
 color:white;
 
-font-size:18px;
+border:none;
+
+padding:14px;
 
 border-radius:8px;
 
 cursor:pointer;
 
+font-size:18px;
+
+margin-top:15px;
+
+width:100%;
+
 }
 
 button:hover{
 
-background:#0055cc;
+background:#005ed1;
+
+}
+
+.features{
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+.features h2{
+
+margin-bottom:30px;
+
+color:#003366;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.card{
+
+background:white;
+
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:0 3px 12px rgba(0,0,0,.1);
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+color:#0077ff;
+
+}
+
+footer{
+
+background:#003366;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:40px;
 
 }
 
 @media(max-width:768px){
 
-h1{
+.hero-content h1{
 
-font-size:32px;
+font-size:34px;
 
 }
 
-p{
+.hero-content p{
 
-font-size:16px;
+font-size:18px;
+
+}
+
+.booking{
+
+margin-top:-40px;
 
 }
 
@@ -148,13 +278,25 @@ font-size:16px;
 
 <header>
 
-<div class="overlay">
+<div class="overlay"></div>
 
-<h1>آژانس هواپیمایی آسمان</h1>
+<div class="hero-content">
+
+<div class="logo">
+
+✈️ آسمان آبی
+
+</div>
+
+<h1>
+
+آژانس هواپیمایی آسمان آبی
+
+</h1>
 
 <p>
 
-رزرو بلیط داخلی و خارجی با بهترین قیمت
+رزرو آنلاین بلیط داخلی و خارجی با بهترین قیمت
 
 </p>
 
@@ -162,9 +304,11 @@ font-size:16px;
 
 </header>
 
-<div class="booking">
+<section class="booking">
 
-<h2>رزرو بلیط</h2>
+<h2>فرم رزرو بلیط</h2>
+
+<div class="form-grid">
 
 <input type="text" placeholder="مبدا">
 
@@ -174,15 +318,100 @@ font-size:16px;
 
 <input type="date">
 
+<select>
+
+<option>نوع سفر</option>
+
+<option>رفت</option>
+
+<option>رفت و برگشت</option>
+
+</select>
+
+<select>
+
+<option>تعداد مسافر</option>
+
+<option>1 نفر</option>
+
+<option>2 نفر</option>
+
+<option>3 نفر</option>
+
+<option>4 نفر</option>
+
+</select>
+
+</div>
+
 <button>
 
-رزرو بلیط
+جستجوی پرواز
 
 </button>
 
+</section>
+
+<section class="features">
+
+<h2>
+
+چرا آژانس آسمان آبی؟
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>✈️ پروازهای داخلی</h3>
+
+<p>
+
+رزرو سریع بلیط به تمامی شهرهای ایران.
+
+</p>
+
 </div>
+
+<div class="card">
+
+<h3>🌍 پروازهای خارجی</h3>
+
+<p>
+
+بهترین قیمت برای مقاصد بین‌المللی.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎯 پشتیبانی 24 ساعته</h3>
+
+<p>
+
+پاسخگویی سریع و حرفه‌ای در تمام ساعات.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+آژانس هواپیمایی آسمان آبی | پروژه دانشجویی طراحی وب
+
+</p>
+
+</footer>
 
 </body>
 
 </htm
-     
